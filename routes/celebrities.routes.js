@@ -32,4 +32,7 @@ Celebrity.find()
 
   })
 
+
+  
+
   module.exports = router;

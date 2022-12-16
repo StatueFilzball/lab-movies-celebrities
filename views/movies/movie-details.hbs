@@ -1,2 +1,19 @@
-<h2>Joo</h2>
+<h2>Movie Detail Page - {{title}}</h2>
 
+<display>Title: {{title}}</display>
+<br>
+<display>Genre: {{genre}}</display>
+<br>
+<display>Plot: {{plot}}</display>
+
+<p>Cast:</p>
+<display><ul></ul>{{#each cast}}
+<li>Name: {{this.name}}, Occupation: {{this.occupation}}, Catch Phrase: {{this.catchPhrase}}</li>
+{{/each}}</ul>
+</display>
+
+<form action="/movies/{{_id}}/delete" method="post">
+            <button type="submit">Delete this movie</button>
+        </form>
+
+        <a href="/movies/{{_id}}/edit">Edit Movie</a>
