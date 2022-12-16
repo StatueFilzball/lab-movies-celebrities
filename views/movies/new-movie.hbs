@@ -1,0 +1,28 @@
+<form action="/movies/create" method="post">
+
+<input type="text" name="title" placeholder="Enter Movie Name">
+    <br/>
+<input type="text" name="genre" placeholder="Enter Movie Genre">
+    <br/>
+<input type="text" name="plot" placeholder="Enter Movie plot">
+<br>
+<br>
+<select name="cast" multiple>
+
+  {{#each allCelebrities}}
+  <option value="{{this._id}}">{{this.name}}</option>
+  {{/each}}
+</select>
+<br>
+<button type="submit">Create Movie</button>
+
+</form>
+
+
+
+{{!-- <select name="cars" id="cars" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select> --}}
