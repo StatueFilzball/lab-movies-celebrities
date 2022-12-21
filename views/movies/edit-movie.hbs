@@ -1,12 +1,20 @@
 <h2>Edit this movie</h2>
 
-<form action="/movies/{{_id}}" method="post">
+<form action="/movies/{{_id}}" method="post"> 
+{{!-- 
+// check the route where you'd send the update movie data 
+--}}
     <input type="text" name="title" value="{{title}}">
     <br/>
     <input type="email" name="genre" value="{{genre}}">
     <br/>
     <input type="password" name="plot" value="{{plot}}">
     <br/>
+
+    {{!-- here you can use the select input for the cast value and
+    create an option tag for each celebrity with the id as value attribute,
+    (cast field is an array of id of celebrities) and the name shown to the user. --}}
+    
     <input type="password" name="cast" value="{{cast}}">
     <br/>
     <button type="submit">Update movie</button>
